@@ -1,101 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
 @font-face {
     font-family: Heart_Breaking_Bad;
     src: url("../font-style/Heart_Breaking_Bad.otf") format("opentype");
 }
 
 *{
+    font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+img,video{
+    width: 90%;
+    margin: 5%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .bb-font {
     font-family: Heart_Breaking_Bad;
+    font-size: 40px; /*on  movile devices*/
 }
 
 
-/* header and menu */
+/* header and menu of indexwebpage*/
 header {
     display: flex;
-    font-size: 72px;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
 }
 
-#nav-menu li a {
-text-decoration: none;
+.navbar-brand{
+    
+}
+.nav-container div{
+        display: block;
+    }
+
+
+li ,a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 60px;
+}
+
+.image-container {
+    width: 70%;
+}
+/*wallpaper*/
+#background-index {
+    background: linear-gradient(180deg, rgba(1,36,0,1) 12%, rgba(0,0,0,1) 43%);   
+}
+
+
+.scroll-text {
+    text-align: center;
+    margin: 20px;
+}
+
+.scroll-text h2 {
+    font-size: 20px;
+}
+
+.articles-secc {
+    /*border: 1px solid seagreen;*/
+    margin-bottom: 8%;
+    color: white;
+}
+ 
+
+.wigle {
+    position: absolute;
+    width: 25%;
+    animation-name: wiggling;
+    animation-duration: 4s;
+    animation-delay: -4s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes wiggling {
+  0%   {transform: rotate(0deg);}
+  
+  50%  {transform: rotate(-20deg)}
+  
+  100% {transform: rotate(0deg);}
+}
+
+
+/*cast*/
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#searchbar{
+    background-color: black;
+    border: 1px solid #3fb573;
+    color: white;
+}
+
+.h3-cast {
 color: white;
 }
 
-
-
-ul li {
-    list-style-type: none;
-    margin: 0;
-    padding: 25;
-    display: inline;
-}
-
-
-.nav-bar-menu {
+.cast-container {
     display: flex;
-    margin-right: 100px;
     flex-direction: column;
-    justify-content: center;
-
-}
-
-.nav-bar-logo {
-    max-width: 400px;
-}
-
-
-
-
-/*wallpaper*/
-#background-index {
-    background-image: url(../images/index-wallpaper.jpg)
-}
-
-
-/*home secctions*/
-
-#los_pollos {
-    display: flex;
-    margin-top: 100px;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-
-.pollos-img {
-    width: 90%;
-
-}
-
-.scroll-text {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
+    justify-content: center;
     text-align: center;
+}
+
+.card-container {
+    padding: 15%;
+}
+.p-nickname {
+    font-size: 15px;
+}
+
+.char-title {
+    display: flex;
+    justify-content: center;
+    margin-right: 30%;
+    margin-left: 30%;
+    padding: 5%;
+    margin-bottom: 5%;
+    border:2px solid #3fb573;
+    color: white;
+    font-size: 20px;
+}
+
+
+/*Log IN html*/
+
+/*About */
+.first-about {
+    color: whitesmoke;
+}
+
+#about p {
+margin-top: 20px;
 
 }
 
-.saul-video {
-    height: 400px;
+#about p, h3 {
+    text-align: left;
 }
 
 
-.container {
-    position: relative;
+/*media queries*/
+
+main {
+    width:100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
 }
 
-.container .saul-video {
-    position: relative;
-    z-index: 0;
+
+@media (min-width: 576px) {
+  
 }
 
-.overlay {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
+@media (min-width: 768px) {
+  
 }
+
+@media (min-width: 992px) {
+  .articles-secc{
+      width: 48%;
+  }
+
+  main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+

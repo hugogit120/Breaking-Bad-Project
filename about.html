@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/burger-menu-icon.css">
+
+
   <title>Document</title>
+
 </head>
-<body>
-  
+
+<body id="background-index">
+
+  <header>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html"><img src="/images/NicePng_breaking-bad-logo-png_628846.png" alt="Logo"
+            class="navbar-brand"></a>
+        <div>
+          <div class="burger-menu-icon" onclick="toggleBurgerMenu(event)">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <ul class="nav-menu hide-menu" id="nav-menu">
+        <li><a href="cast.html"><span class="bb-font">Characters</span></a></li>
+        <li><a href="about.html"><span class="bb-font">About</span></a></li>
+        <li><a href="signup.html"><span class="bb-font">Sign up</span></a></li>
+        <li><a href="login.html"><span class="bb-font">Login</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="about">
+
+    <section class="articles-secc">
+      <div class="first-about">
+        <img src="/images/breaking bad wallpaper 4.jpg">
+      </div>
+        <h3>About the show</h3>
+        <p>
+          Breaking Bad follows protagonist Walter White (Bryan Cranston), a chemistry teacher who lives in New Mexico with his
+          wife (Anna Gunn) and teenage son (RJ Mitte) who has cerebral palsy. White is diagnosed with Stage III cancer and
+          given a
+          prognosis of two years left to live. With a new sense of fearlessness based on his medical prognosis, and a desire
+          to
+          secure his family's financial security, White chooses to enter a dangerous world of drugs and crime and ascends to
+          power
+          in this world. The series explores how a fatal diagnosis such as White's releases a typical man from the daily
+          concerns
+          and constraints of normal society and follows his transformation from mild family man to a kingpin of the drug
+          trade.
+        </p>
+      </div>
+      
+      <hr>
+
+      <div>
+        <img src="/images/lospolloshermanos.jpg" alt="pollos-hermanos" class="pollos-img">
+      </div>
+
+      <div class="scroll-text">
+        <h3>Los pollos Hermanos</h3>
+        <p>Los Pollos Hermanos was a fast-food restaurant chain that specialized in fried chicken operating across the
+          southwestern
+          United States. The name, pronounced [los ˈpo.ʝos eɾˈma.nos], is ungrammatical Spanish for "The Chicken
+          Brothers."
+          Founded by Gustavo Fring and Max Arciniega, the restaurant chain had fourteen locations throughout the
+          southwest and was
+          Gustavo Fring's major business concern. Los Pollos Hermanos was a subsidiary of Madrigal Electromotive, a
+          German
+          conglomerate with an ownership stake in the company. The restaurant also provided money-laundering and
+          logistics for
+          illegal activities.</p>
+          <hr>
+      </div>
+      <!--
+        <div>
+          <img id="gus" src="/images/gusfring.png">
+        </div>
+      -->
+
+    </section>
+
+    <section class="articles-secc">
+
+      <img
+        src="/images/kisspng-saul-goodman-jesse-pinkman-walter-white-better-cal-breaking-bad-5ad44cd900f023.3607181315238627450039.png"
+        class="wigle">
+
+      <img src="/images/saul-goodman.png">
+      <div class="container">
+        <video class="saul-video" controls>
+          <source src="/images/saul-comercial.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+  <script type="text/javascript" src="/js/api.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
 </body>
+
 </html>

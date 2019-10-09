@@ -5,8 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/singup.css">
+  <link rel="stylesheet" type="text/css" href="/css/burger-menu-icon.css">
 </head>
-<body>
-  
+<body id="cast">
+  <header>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html"><img src="/images/NicePng_breaking-bad-logo-png_628846.png" alt="Logo"
+            class="navbar-brand"></a>
+        <div>
+          <div class="burger-menu-icon" onclick="toggleBurgerMenu(event)">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <ul class="nav-menu hide-menu" id="nav-menu">
+        <li><a href="cast.html"><span class="bb-font">Characters</span></a></li>
+        <li><a href="about.html"><span class="bb-font">About</span></a></li>
+        <li><a href="signup.html"><span class="bb-font">Sign up</span></a></li>
+        <li><a href="login.html"><span class="bb-font">Login</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="search-container">
+    
+        <h3 class="h3-cast">cast</h3>
+      
+        <input type="text" placeholder="Search.." name="search" id="searchbar">
+
+  </section>
+
+  <section class="cast-container">
+    
+    <article class="card-container">
+        <div>
+          <img src="/images/saul-cast.jpg"/>
+        </div> 
+
+        <div>
+         <p><h3>Saul Goodman</h3></p>
+        <p class="p-nickname">Jimmy McGill</p>
+          <p class="p-nickname">ocupation: lawer</p>
+        </div>
+    </article>
+
+  </section>
+
+  <script src="/js/charapi.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+
 </body>
 </html>
