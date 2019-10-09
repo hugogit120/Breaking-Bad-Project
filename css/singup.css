@@ -36,8 +36,15 @@ form {
 
 .row{
 	width:100%;
-	margin-top:100%;
+	margin-top:15%;
 	border-radius:14px;
+}
+
+input {
+	margin: 10px 0;
+    height: 40px;
+    text-align: center;
+    width: 100%;
 }
 
 button {
