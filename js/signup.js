@@ -4,10 +4,11 @@ class Signup {
     constructor(){
         this.nameInput = document.querySelector('#name'); 
         this.lastNameInput = document.querySelector('#lastName');
-        this.phoneInput = document.querySelector('#phone');
         this.emailInput = document.querySelector('#email');
         this.pwdInput = document.querySelector('#pwd');
         this.pwdVerifyInput = document.querySelector('#pwdVerify');
+        this.submitButton = document.querySelector('#signup-button');
+        this.errorsWrapper = document.querySelector('.errorsWrapper');
     }
 
     saveData = (event) => { 
@@ -15,14 +16,11 @@ class Signup {
                        //aqui recojeremos los valores de los inputs
         const name = this.nameInput.value;
         const lastName = this.lastNameInput.value;
-        const phone = this.phoneInput.value;
         const email = this.emailInput.value;
         const pwd = this.pwdInput.value;
-
-       //console.log(name, pokemon, type, city, phone, email, password)
         
                       // crear una instancia de user
-        const newUser = new User(name, lastName, phone, email, pwd);
+        const newUser = new User(name, lastName, email, pwd);
         console.log(newUser);
                      // almacenar datos en el local storage
         let usersDB = JSON.parse(localStorage.getItem('users')) //recogemos del local storage
@@ -38,7 +36,6 @@ class Signup {
         // vaciar el formulario una vez se haga el singup
         this.nameInput.value = '';
         this.lastNameInput.value = '';
-        this.phoneInput.value = '';
         this.emailInput.value = '';
         this.pwdInput.value = '';
         this.pwdVerifyInput.value = '';
@@ -50,24 +47,25 @@ class Signup {
         //comprobar los datos de inputs y validarlos
         //console.log(validator.validateValidEmail('hola'));
         this.emailInput.addEventListener('input', event => {
+            console.log(event.target.value)
             const errors = validator.validateValidEmail(event.target.value);
             if (!('invalidEmailError' in errors)){
                 validator.validateUniqueEmail(event.target.value)
             }
             //esta funcion devuelve los errores
             this.handleErrorMessages();
-            this.hanbleIsValid();
+            this.handleIsValid();
         })
         this.pwdInput.addEventListener('input', even => {
             validator.validatePassword(event.target.value);
             validator.validatePasswordRepeat(event.target.value, this.pwdVerifyInput.value);
             this.handleErrorMessages();
-            this.hanbleIsValid();
+            this.handleIsValid();
         })
         this.pwdVerifyInput.addEventListener('input', event => {
             const errors = validator.validatePasswordRepeat(this.pwdInput.value, event.target.value);
             this.handleErrorMessages();
-            this.hanbleIsValid();
+            this.handleIsValid();
         })
     }
 
@@ -83,7 +81,7 @@ class Signup {
         }
     }
 
-    hanbleIsValid = () => {
+    handleIsValid = () => {
         //activar o desactivar del form en funcion de si hay o no errores
         const errors = validator.checkErrors();
         if (Object.keys(errors).length === 0) { // no hay errores

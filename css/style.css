@@ -134,13 +134,14 @@ li ,a{
 
 /*About */
 
+
 #about p {
 margin-top: 20px;
 color: whitesmoke;
 }
 
 #about p, h3 {
-    text-align: left;
+    text-align: justify
 }
 
 .card-container h3 {
@@ -260,10 +261,6 @@ main {
         font-size: 21px;
     }
 
-     .articles-secc{
-      width: 48%;
-  }
-
      main {
         display: flex;
         flex-wrap: wrap;
@@ -290,6 +287,44 @@ main {
         padding: 20px;
         width: 32%;
     }
+
+    .articles-secc {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    }
+
+    .articles-secc img {
+        width: 300px;
+    }
+
+    .about-div {
+        width: 65%;
+    }
+
+    #about hr {
+        margin-bottom: 30px;
+    }
+
+    .wigle {
+        top: 0;
+        left: 0;
+        width: 10% !important;
+        animation-name: wiggling;
+        animation-duration: 4s;
+        animation-delay: -4s;
+        animation-iteration-count: infinite;
+    }
+    
+    .navbar-brand {
+        width: 100%;
+    }
+
+    .bb-font {
+        font-size: 55px;
+    }
+
 
 }
 

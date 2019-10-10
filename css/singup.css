@@ -70,5 +70,7 @@ button {
 		background-position-x: inherit;
 	}
 
-	
+	.container {
+    	width: 300px;
+	}
 }

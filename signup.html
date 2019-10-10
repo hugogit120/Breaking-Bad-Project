@@ -50,10 +50,6 @@
         </div>
 
         <div class="form-group">
-          <input type="text" class="form-control" id="phone" placeholder="phone number *" name="phone" required>
-        </div>
-        
-        <div class="form-group">
           <input type="email" class="form-control" id="email" placeholder="Enter email *" name="email" required>
         </div>
 
@@ -65,9 +61,13 @@
           <input type="password" class="form-control" id="pwdVerify" placeholder="Repeat password *" name="pwdVerify" required>
         </div>
 
-          <button type="submit" class="button" class="btn btn-success" onclick="signup.saveData(event)">Signup</button>
-          
+          <button id="signup-button" type="submit" class="button" class="btn btn-success" disabled onclick="signup.saveData(event)">Signup</button>
       </form>
+
+      <div class="errorsWrapper">
+
+      </div>
+      
     </div>
   </div>
   <script src="js/index.js"></script>

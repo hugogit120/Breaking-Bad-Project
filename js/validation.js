@@ -61,7 +61,7 @@ class Validator {
         //si no tiene mas de 5 añadimos el error
         //return this.errors
 
-        if (pwd.length === 5) {
+        if (pwd.length >= 5) {
             delete this.errors.passwordError;
         } else {
             this.errors.passwordError = this.passwordError;
@@ -89,7 +89,6 @@ class Validator {
                 passwordError: this.passwordError,
                 repeatPassError: this.repeatPassError,
             }
-
         }
         return this.errors
     }
