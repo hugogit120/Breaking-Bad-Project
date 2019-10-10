@@ -37,13 +37,11 @@ class Signup {
                    
         // vaciar el formulario una vez se haga el singup
         this.nameInput.value = '';
-        this.pokemonInput.value = '';
-        this.typeInput.value = '';
-        this.cityInput.value = '';
+        this.lastNameInput.value = '';
         this.phoneInput.value = '';
         this.emailInput.value = '';
-        this.passwordInput.value = '';
-        this.repeatPasswordInput.value = '';
+        this.pwdInput.value = '';
+        this.pwdVerifyInput.value = '';
 
         validator.checkErrors(true);
     }
@@ -60,14 +58,14 @@ class Signup {
             this.handleErrorMessages();
             this.hanbleIsValid();
         })
-        this.passwordInput.addEventListener('input', even => {
+        this.pwdInput.addEventListener('input', even => {
             validator.validatePassword(event.target.value);
-            validator.validatePasswordRepeat(event.target.value, this.repeatPasswordInput.value);
+            validator.validatePasswordRepeat(event.target.value, this.pwdVerifyInput.value);
             this.handleErrorMessages();
             this.hanbleIsValid();
         })
-        this.repeatPasswordInput.addEventListener('input', event => {
-            const errors = validator.validatePasswordRepeat(this.passwordInput.value, event.target.value);
+        this.pwdVerifyInput.addEventListener('input', event => {
+            const errors = validator.validatePasswordRepeat(this.pwdInput.value, event.target.value);
             this.handleErrorMessages();
             this.hanbleIsValid();
         })

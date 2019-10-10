@@ -52,7 +52,7 @@ button {
 	width: 90%;
 }
 
-@media(max-width:768px){
+@media(min-width:768px){
 	body{
 		font-size:10px;
 	}
@@ -66,6 +66,9 @@ button {
 
 	}
 	
+	#loggin{
+		background-position-x: inherit;
+	}
 
 	
 }

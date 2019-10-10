@@ -35,7 +35,7 @@
 
   <div class="container">
     <div class="row">
-      <form action="/action_page.php" class="col-xs-12 col-sm-12 col-md-12">
+      <form action="" class="col-xs-12 col-sm-12 col-md-12">
         <h2>Login</h2>
 
         <div class="form-group">
@@ -46,11 +46,14 @@
           <input type="password" class="form-control" id="pwd" placeholder="Enter password *" name="pwd" required>
         </div>
 
-        <button type="submit" class="btn btn-success">Submit <i class="glyphicon glyphicon-send"></i></button>
+        <<button type="submit" class="button" id="login-button" onclick="login(event)">Login</button>
 
       </form>
+      <div class="errors-container">
+      </div>
     </div>
   </div>
   <script src="js/index.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>

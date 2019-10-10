@@ -11,10 +11,12 @@
     padding: 0;
 }
 
+
 img,video{
     width: 90%;
     margin: 5%;
 }
+
 
 body{
     display: flex;
@@ -39,9 +41,6 @@ header {
     width: 100%;
 }
 
-.navbar-brand{
-    
-}
 .nav-container div{
         display: block;
     }
@@ -69,6 +68,17 @@ li ,a{
 #home-main h1{
     margin-top: 20%;
     color: white;
+}
+
+.small h3 {
+    text-align: center;
+}
+
+.small p {
+    color: white ;
+    margin-left: 17px;
+    width: 55%;
+    margin-left: 83px;
 }
 
 /*cast*/
@@ -123,13 +133,10 @@ li ,a{
 /*Log IN html*/
 
 /*About */
-.first-about {
-    color: whitesmoke;
-}
 
 #about p {
 margin-top: 20px;
-
+color: whitesmoke;
 }
 
 #about p, h3 {
@@ -140,19 +147,9 @@ margin-top: 20px;
     text-align: center;
 }
 
-.scroll-text {
-    text-align: center;
-    margin: 20px;
-}
-
-.scroll-text h2 {
-    font-size: 20px;
-}
-
 .articles-secc {
     /*border: 1px solid seagreen;*/
     margin-bottom: 8%;
-    color: white;
 }
  
 
@@ -174,6 +171,30 @@ margin-top: 20px;
   100% {transform: rotate(0deg);}
 }
 
+
+/*footer*/
+footer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 22%;
+}
+
+.footer-text {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.footer-images {
+    display: flex;
+    width: 10%;
+    margin-left: 27px;
+}
+
+footer p {
+color: white;
+font-size: 11px;
+}
 /*media queries*/
 
 main {
@@ -183,29 +204,96 @@ main {
     flex-direction: column;
 }
 
+.death-stuff {
+        font-size: 20px;
+        color: white;
+    }
 
-@media (min-width: 576px) {
-  
-}
+     #random-character {
+        margin-top: 50px;
+        font-size: 20px;
+    }
 
-@media (min-width: 768px) {
-  
-}
+    .death-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
 
-@media (min-width: 992px) {
-  .articles-secc{
+    .death-info {
+        display: flex;
+        justify-content: center;
+        color: white;
+        background: grey;
+        margin: 30px;
+    }
+
+@media only screen and (min-width: 768px) {
+    .medium h3 {
+      font-size: 50px;
+      text-align: center;    
+    }
+    
+    .medium p {
+        font-size: 30px;
+        text-align: center;
+        margin: 0 100px;
+        color: white;
+        padding-top: 20px;
+    }
+
+    #home-main h1 {
+        text-align: center; 
+    }
+
+    #home-main h3 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #home-main p {
+        font-size: 25px;
+    }
+
+   
+    footer p {
+        font-size: 21px;
+    }
+
+     .articles-secc{
       width: 48%;
   }
 
-  main {
+     main {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
+     footer p {
+        font-size: 21px;
+    }
+
+    
+    img,video{
+        width: 50%;
+        margin: 5%;
+    }
+
+    .cast-container{
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+
+}
+    .card-container{
+        padding: 20px;
+        width: 32%;
+    }
+
 }
 
-@media (min-width: 1200px) {
-  
-}
+
+
 
 
