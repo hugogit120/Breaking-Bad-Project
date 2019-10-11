@@ -1,6 +1,6 @@
 const apiUrl = "https://www.breakingbadapi.com/api/";
 
-async function getCharacters() {
+async function getCharacters(callback) {
     let response = await fetch(apiUrl + "characters");
     let data = await response.json();
     let container = document.querySelector(".cast-container");
@@ -20,9 +20,28 @@ async function getCharacters() {
   
         container.appendChild(article)
     }
-
+    callback();
 }
 
-window.onload = function () {
-    getCharacters();
+function search() {
+   let searchValue = document.querySelector('#searchbar');
+   let dataArray = document.querySelectorAll(".card-container")
+   let filteredCharacters = []
+  searchValue.addEventListener("input", event => {
+    console.log(event.target.value)
+    for (let i = 0; i < dataArray.length; i++) {
+        if (dataArray[i].innerText.includes(searchValue.value)){
+          filteredCharacters.push(dataArray[i])
+        }
+    }
+  
+    console.log(filteredCharacters)
+/*     let filteredArr = data.filter(character => character.name === event.target.value) */
+  }) 
+  
+}
+
+
+window.onload =  function () {
+   getCharacters(search);
 }

@@ -56,7 +56,7 @@ class Signup {
             this.handleErrorMessages();
             this.handleIsValid();
         })
-        this.pwdInput.addEventListener('input', even => {
+        this.pwdInput.addEventListener('input', event => {
             validator.validatePassword(event.target.value);
             validator.validatePasswordRepeat(event.target.value, this.pwdVerifyInput.value);
             this.handleErrorMessages();

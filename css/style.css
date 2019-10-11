@@ -58,7 +58,7 @@ li ,a{
 }
 /*wallpaper and index page*/
 #background-index {
-    background: linear-gradient(180deg, rgba(1,36,0,1) 12%, rgba(0,0,0,1) 43%);   
+    background: black;   
 }
 
 #home-main p { 
@@ -80,6 +80,10 @@ li ,a{
     width: 55%;
     margin-left: 83px;
 }
+
+.main-articles {
+        text-align: justify;
+    }
 
 /*cast*/
 
@@ -187,16 +191,18 @@ footer{
 }
 
 .footer-images {
-    display: flex;
-    width: 10%;
-    margin-left: 27px;
+    
+}
+
+.tiny-images {
+    width: 30px;
+    height: 30px;
 }
 
 footer p {
 color: white;
 font-size: 11px;
 }
-/*media queries*/
 
 main {
     width:100%;
@@ -230,6 +236,39 @@ main {
     }
 
 @media only screen and (min-width: 768px) {
+
+    .opening-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .bigger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opening {
+        width: 70%;
+    }
+   
+
+    #background-index {
+    background: linear-gradient(180deg, rgba(1,36,0,1) 12%, rgba(0,0,0,1) 43%);   
+}
+
+    .reasons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .reasons img {
+        width: 500px;
+    }
+
     .medium h3 {
       font-size: 50px;
       text-align: center;    
@@ -325,6 +364,14 @@ main {
         font-size: 55px;
     }
 
+    footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-images {
+        width: 100px;
+    }
 
 }
 
