@@ -5,36 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  
+  <title>BreakingBad</title>
+
   <link rel="stylesheet" type="text/css" href="css/singup.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/burger-menu-icon.css">
 </head>
+
 <body id="signup">
 
-<header>
-  <nav>
-    <div class="nav-container">
-      <a href="index.html"><img src="images/NicePng_breaking-bad-logo-png_628846.png" alt="Logo"
-          class="navbar-brand"></a>
-      <div>
-        <div class="burger-menu-icon" onclick="toggleBurgerMenu(event)">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html"><img src="images/NicePng_breaking-bad-logo-png_628846.png" alt="Logo"
+            class="navbar-brand"></a>
+        <div>
+          <div class="burger-menu-icon" onclick="toggleBurgerMenu(event)">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
-    </div>
-    <ul class="nav-menu hide-menu" id="nav-menu">
-      <li><a href="cast.html"><span class="bb-font">Characters</span></a></li>
-      <li><a href="about.html"><span class="bb-font">About</span></a></li>
-      <li><a href="signup.html"><span class="bb-font">Sign up</span></a></li>
-      <li><a href="login.html"><span class="bb-font">Login</span></a></li>
-    </ul>
-  </nav>
-</header>
+      <ul class="nav-menu hide-menu" id="nav-menu">
+        <li><a href="cast.html"><span class="bb-font">Characters</span></a></li>
+        <li><a href="about.html"><span class="bb-font">About</span></a></li>
+        <li><a href="signup.html"><span class="bb-font">Sign up</span></a></li>
+        <li><a href="login.html"><span class="bb-font">Login</span></a></li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="container">
     <div class="row">
@@ -43,10 +44,9 @@
         <div class="form-group">
           <input type="text" class="form-control" id="name" placeholder="Name *" name="name" required>
         </div>
-  
+
         <div class="form-group">
-          <input type="text" class="form-control" id="lastName" placeholder="Last Name *" name="lastName"
-            required>
+          <input type="text" class="form-control" id="lastName" placeholder="Last Name *" name="lastName" required>
         </div>
 
         <div class="form-group">
@@ -58,16 +58,18 @@
         </div>
 
         <div class="form-group">
-          <input type="password" class="form-control" id="pwdVerify" placeholder="Repeat password *" name="pwdVerify" required>
+          <input type="password" class="form-control" id="pwdVerify" placeholder="Repeat password *" name="pwdVerify"
+            required>
         </div>
 
-          <button id="signup-button" type="submit" class="button" class="btn btn-success" disabled onclick="signup.saveData(event)">Signup</button>
+        <button id="signup-button" type="submit" class="button" class="btn btn-success" disabled
+          onclick='signup.saveData(event)'>Signup</button>
       </form>
 
       <div class="errorsWrapper">
 
       </div>
-      
+
     </div>
   </div>
   <script src="js/index.js"></script>
@@ -75,4 +77,5 @@
   <script src="js/signup.js"></script>
   <script src="js/validation.js"></script>
 </body>
+
 </html>

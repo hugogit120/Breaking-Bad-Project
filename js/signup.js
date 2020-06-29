@@ -1,5 +1,4 @@
 'use strict';
-
 class Signup {
     constructor(){
         this.nameInput = document.querySelector('#name'); 
@@ -85,9 +84,9 @@ class Signup {
         //activar o desactivar del form en funcion de si hay o no errores
         const errors = validator.checkErrors();
         if (Object.keys(errors).length === 0) { // no hay errores
-            this.buttonInput.removeAttribute("disabled");
+            this.submitButton.removeAttribute("disabled");
         } else {
-            this.buttonInput.setAttribute('disabled', '');
+            this.submitButton.setAttribute('disabled', '');
         }
     }
 }
